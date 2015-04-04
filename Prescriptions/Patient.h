@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain) NSString * patientFirstName;
 @property (nonatomic, retain) NSString * patientLastName;
+@property (nonatomic, retain) NSString * patientAge;
 @property (nonatomic, retain) NSSet *prescriptions;
 @end
 

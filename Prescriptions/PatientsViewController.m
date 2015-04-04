@@ -12,6 +12,7 @@
 #import "Patient.h"
 #import "Prescription.h"
 #import "PrescriptionsViewController.h"
+#import "EditPatientViewController.h" // need it to access the destination view controller in prepareforsegue.
 
 @interface PatientsViewController ()<UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
@@ -27,7 +28,6 @@
     [super viewDidLoad];
 
     //best place to add the fetch request is in the view didload method.
-
     NSError *error;
     if (![self.fetchedResultsController performFetch:&error]) {
         NSLog(@"Error! %@", error);
@@ -72,7 +72,7 @@
 
     return [SectionInfo numberOfObjects];
 }
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell* )sender{
 
     if ([[segue identifier]isEqualToString:@"addPatient"]) {
 
@@ -82,12 +82,12 @@
         Patient *addPatient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient" inManagedObjectContext:[self managedObjectContext]];
 
         addPatientVC.addPatient = addPatient;
-        
+
     }
 
     if ([[segue identifier]isEqualToString:@"toPrescriptions"]) {
 
-       // UINavigationController *NavController = segue.destinationViewController;
+        // UINavigationController *NavController = segue.destinationViewController;
         PrescriptionsViewController *prescriptionVC = [segue destinationViewController];
 
         //Patient *addPatient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient" inManagedObjectContext:[self managedObjectContext]];
@@ -97,13 +97,24 @@
         Patient *selectedPatient =(Patient *)[self.fetchresultsController objectAtIndexPath:indexPath];
 
         prescriptionVC.selectedPatient = selectedPatient;
-        
+
+    }
+    //need to check the segue for editPatient
+
+    if ([[segue identifier]isEqualToString:@"editPatient"]) {
+
+        UINavigationController *navigationController = [segue destinationViewController];
+        EditPatientViewController *editPatientVC = (EditPatientViewController*) navigationController.topViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+
+        Patient *editPatient = (Patient *)[self.fetchresultsController objectAtIndexPath:indexPath];
+
+        editPatientVC.editPatient = editPatient;
+
+
     }
 
 
-
-    
-    
 }
 
 #pragma mark - Fetch Results Controller Section.
@@ -198,7 +209,7 @@
             break;
         case NSFetchedResultsChangeDelete:
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-
+            
         default:
             break;
     }

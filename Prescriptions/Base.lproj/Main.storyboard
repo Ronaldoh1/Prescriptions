@@ -121,6 +121,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="45X-2j-l6c" kind="show" identifier="toPrescriptions" id="sao-wO-FuY"/>
+                                            <segue destination="l8V-dY-61A" kind="presentation" identifier="editPatient" trigger="accessoryAction" modalTransitionStyle="flipHorizontal" id="BLK-hZ-t9k"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -154,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="957" y="1126"/>
         </scene>
-        <!--View Controller-->
+        <!--Patient-->
         <scene sceneID="zSp-Vc-ldu">
             <objects>
-                <viewController id="pDV-WE-HdA" sceneMemberID="viewController">
+                <viewController id="pDV-WE-HdA" customClass="EditPatientViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dAt-Yt-TAV"/>
                         <viewControllerLayoutGuide type="bottom" id="ijg-9M-wex"/>
@@ -175,11 +176,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eig-Yd-P9o">
-                                <rect key="frame" x="23" y="112" width="322" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="upF-bT-Xzm">
                                 <rect key="frame" x="23" y="193" width="322" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -212,6 +208,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eig-Yd-P9o">
+                                <rect key="frame" x="23" y="112" width="322" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -219,7 +220,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eig-Yd-P9o" secondAttribute="trailing" constant="53" id="BJr-Vl-WWX"/>
                             <constraint firstItem="upF-bT-Xzm" firstAttribute="leading" secondItem="BfJ-EC-T70" secondAttribute="leading" id="Ddk-0q-BvJ"/>
                             <constraint firstItem="BfJ-EC-T70" firstAttribute="top" secondItem="upF-bT-Xzm" secondAttribute="bottom" constant="23" id="EUu-E9-A7B"/>
-                            <constraint firstItem="i8b-CE-k4n" firstAttribute="top" secondItem="dAt-Yt-TAV" secondAttribute="bottom" constant="58" id="GLA-g7-3tj"/>
+                            <constraint firstItem="i8b-CE-k4n" firstAttribute="top" secondItem="dAt-Yt-TAV" secondAttribute="bottom" constant="14" id="GLA-g7-3tj"/>
                             <constraint firstItem="Zeq-It-6eT" firstAttribute="leading" secondItem="BfJ-EC-T70" secondAttribute="leading" id="Hmc-qb-g8t"/>
                             <constraint firstItem="eig-Yd-P9o" firstAttribute="top" secondItem="i8b-CE-k4n" secondAttribute="bottom" constant="13" id="IVt-y9-85n"/>
                             <constraint firstItem="i8b-CE-k4n" firstAttribute="leading" secondItem="buD-zP-uD6" secondAttribute="leadingMargin" constant="7" id="KLH-7S-rao"/>
@@ -233,11 +234,29 @@
                             <constraint firstAttribute="trailingMargin" secondItem="i8b-CE-k4n" secondAttribute="trailing" constant="59" id="zSL-cn-xiS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Patient" id="gQU-Cg-8x7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0QT-7H-8u2">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="pDV-WE-HdA" id="VQY-h5-hCT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="roF-o3-t1K">
+                            <connections>
+                                <action selector="editSaveButtonTapped:" destination="pDV-WE-HdA" id="bSW-uP-4FA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="editSave" destination="roF-o3-t1K" id="U1t-Dg-Kpb"/>
+                        <outlet property="patientAgeTextField" destination="Zeq-It-6eT" id="ogr-Jx-nag"/>
+                        <outlet property="patientLastNameTextField" destination="upF-bT-Xzm" id="eJ3-JB-Sof"/>
+                        <outlet property="patientNameTextField" destination="eig-Yd-P9o" id="h2Y-4g-W59"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hp3-Zx-EQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="1919"/>
+            <point key="canvasLocation" x="1957" y="2065"/>
         </scene>
         <!--Prescriptions-->
         <scene sceneID="nwM-cZ-Dm8">
@@ -472,6 +491,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVb-2l-H6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2196" y="266"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="elK-nf-mqU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l8V-dY-61A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cZk-mU-3te">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pDV-WE-HdA" kind="relationship" relationship="rootViewController" id="4Ya-dD-MoH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tes-ia-2TY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331" y="2065"/>
         </scene>
     </scenes>
 </document>

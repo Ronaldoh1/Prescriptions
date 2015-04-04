@@ -14,5 +14,6 @@
 @dynamic patientFirstName;
 @dynamic patientLastName;
 @dynamic prescriptions;
+@dynamic patientAge;
 
 @end
