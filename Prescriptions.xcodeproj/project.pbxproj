@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2AE863B1ACFDE6A00F74116 /* prescription120.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AE863A1ACFDE6A00F74116 /* prescription120.png */; };
+		F2AE863D1ACFDECE00F74116 /* prescription180.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AE863C1ACFDECE00F74116 /* prescription180.png */; };
+		F2AE863F1ACFE71F00F74116 /* prescriptionlaunchimage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2AE863E1ACFE71F00F74116 /* prescriptionlaunchimage.jpeg */; };
 		F2C5F4B31ACE67D000C32A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4B21ACE67D000C32A98 /* main.m */; };
 		F2C5F4B61ACE67D000C32A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4B51ACE67D000C32A98 /* AppDelegate.m */; };
 		F2C5F4B91ACE67D000C32A98 /* Prescriptions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4B71ACE67D000C32A98 /* Prescriptions.xcdatamodeld */; };
-		F2C5F4BC1ACE67D000C32A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4BB1ACE67D000C32A98 /* ViewController.m */; };
+		F2C5F4BC1ACE67D000C32A98 /* PatientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4BB1ACE67D000C32A98 /* PatientsViewController.m */; };
 		F2C5F4BF1ACE67D000C32A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C5F4BD1ACE67D000C32A98 /* Main.storyboard */; };
 		F2C5F4C11ACE67D000C32A98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C5F4C01ACE67D000C32A98 /* Images.xcassets */; };
 		F2C5F4C41ACE67D000C32A98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C5F4C21ACE67D000C32A98 /* LaunchScreen.xib */; };
 		F2C5F4D01ACE67D000C32A98 /* PrescriptionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4CF1ACE67D000C32A98 /* PrescriptionsTests.m */; };
+		F2C5F4DB1ACE750600C32A98 /* PrescriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4DA1ACE750600C32A98 /* PrescriptionsViewController.m */; };
+		F2C5F4DE1ACE754000C32A98 /* AddPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4DD1ACE754000C32A98 /* AddPatientViewController.m */; };
+		F2C5F4E11ACE755000C32A98 /* AddPrescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4E01ACE755000C32A98 /* AddPrescriptionViewController.m */; };
+		F2C5F4E41ACE788E00C32A98 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4E31ACE788E00C32A98 /* CoreViewController.m */; };
+		F2C5F4E71ACE899F00C32A98 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4E61ACE899F00C32A98 /* Patient.m */; };
+		F2C5F4EA1ACE89A000C32A98 /* Prescription.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4E91ACE89A000C32A98 /* Prescription.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,20 +37,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F2AE863A1ACFDE6A00F74116 /* prescription120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prescription120.png; sourceTree = "<group>"; };
+		F2AE863C1ACFDECE00F74116 /* prescription180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prescription180.png; sourceTree = "<group>"; };
+		F2AE863E1ACFE71F00F74116 /* prescriptionlaunchimage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = prescriptionlaunchimage.jpeg; sourceTree = "<group>"; };
 		F2C5F4AD1ACE67D000C32A98 /* Prescriptions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prescriptions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C5F4B11ACE67D000C32A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2C5F4B21ACE67D000C32A98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2C5F4B41ACE67D000C32A98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F2C5F4B51ACE67D000C32A98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F2C5F4B81ACE67D000C32A98 /* Prescriptions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Prescriptions.xcdatamodel; sourceTree = "<group>"; };
-		F2C5F4BA1ACE67D000C32A98 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F2C5F4BB1ACE67D000C32A98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2C5F4BA1ACE67D000C32A98 /* PatientsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PatientsViewController.h; sourceTree = "<group>"; };
+		F2C5F4BB1ACE67D000C32A98 /* PatientsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PatientsViewController.m; sourceTree = "<group>"; };
 		F2C5F4BE1ACE67D000C32A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2C5F4C01ACE67D000C32A98 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F2C5F4C31ACE67D000C32A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F2C5F4C91ACE67D000C32A98 /* PrescriptionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrescriptionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C5F4CE1ACE67D000C32A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2C5F4CF1ACE67D000C32A98 /* PrescriptionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrescriptionsTests.m; sourceTree = "<group>"; };
+		F2C5F4D91ACE750600C32A98 /* PrescriptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrescriptionsViewController.h; sourceTree = "<group>"; };
+		F2C5F4DA1ACE750600C32A98 /* PrescriptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrescriptionsViewController.m; sourceTree = "<group>"; };
+		F2C5F4DC1ACE754000C32A98 /* AddPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPatientViewController.h; sourceTree = "<group>"; };
+		F2C5F4DD1ACE754000C32A98 /* AddPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPatientViewController.m; sourceTree = "<group>"; };
+		F2C5F4DF1ACE755000C32A98 /* AddPrescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPrescriptionViewController.h; sourceTree = "<group>"; };
+		F2C5F4E01ACE755000C32A98 /* AddPrescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPrescriptionViewController.m; sourceTree = "<group>"; };
+		F2C5F4E21ACE788E00C32A98 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
+		F2C5F4E31ACE788E00C32A98 /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
+		F2C5F4E51ACE899F00C32A98 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patient.h; path = Prescriptions/Patient.h; sourceTree = "<group>"; };
+		F2C5F4E61ACE899F00C32A98 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Patient.m; path = Prescriptions/Patient.m; sourceTree = "<group>"; };
+		F2C5F4E81ACE89A000C32A98 /* Prescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prescription.h; path = Prescriptions/Prescription.h; sourceTree = "<group>"; };
+		F2C5F4E91ACE89A000C32A98 /* Prescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Prescription.m; path = Prescriptions/Prescription.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +109,25 @@
 			children = (
 				F2C5F4B41ACE67D000C32A98 /* AppDelegate.h */,
 				F2C5F4B51ACE67D000C32A98 /* AppDelegate.m */,
-				F2C5F4BA1ACE67D000C32A98 /* ViewController.h */,
-				F2C5F4BB1ACE67D000C32A98 /* ViewController.m */,
+				F2C5F4BA1ACE67D000C32A98 /* PatientsViewController.h */,
+				F2C5F4BB1ACE67D000C32A98 /* PatientsViewController.m */,
+				F2C5F4D91ACE750600C32A98 /* PrescriptionsViewController.h */,
+				F2C5F4DA1ACE750600C32A98 /* PrescriptionsViewController.m */,
+				F2C5F4DC1ACE754000C32A98 /* AddPatientViewController.h */,
+				F2C5F4DD1ACE754000C32A98 /* AddPatientViewController.m */,
+				F2C5F4DF1ACE755000C32A98 /* AddPrescriptionViewController.h */,
+				F2C5F4E01ACE755000C32A98 /* AddPrescriptionViewController.m */,
 				F2C5F4BD1ACE67D000C32A98 /* Main.storyboard */,
+				F2C5F4E21ACE788E00C32A98 /* CoreViewController.h */,
+				F2C5F4E31ACE788E00C32A98 /* CoreViewController.m */,
 				F2C5F4C01ACE67D000C32A98 /* Images.xcassets */,
+				F2AE863E1ACFE71F00F74116 /* prescriptionlaunchimage.jpeg */,
+				F2AE863A1ACFDE6A00F74116 /* prescription120.png */,
+				F2AE863C1ACFDECE00F74116 /* prescription180.png */,
 				F2C5F4C21ACE67D000C32A98 /* LaunchScreen.xib */,
 				F2C5F4B71ACE67D000C32A98 /* Prescriptions.xcdatamodeld */,
 				F2C5F4B01ACE67D000C32A98 /* Supporting Files */,
+				F2C5F4EB1ACE89A700C32A98 /* Data Model */,
 			);
 			path = Prescriptions;
 			sourceTree = "<group>";
@@ -120,6 +156,18 @@
 				F2C5F4CE1ACE67D000C32A98 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2C5F4EB1ACE89A700C32A98 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2C5F4E81ACE89A000C32A98 /* Prescription.h */,
+				F2C5F4E91ACE89A000C32A98 /* Prescription.m */,
+				F2C5F4E51ACE899F00C32A98 /* Patient.h */,
+				F2C5F4E61ACE899F00C32A98 /* Patient.m */,
+			);
+			name = "Data Model";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +253,9 @@
 				F2C5F4BF1ACE67D000C32A98 /* Main.storyboard in Resources */,
 				F2C5F4C41ACE67D000C32A98 /* LaunchScreen.xib in Resources */,
 				F2C5F4C11ACE67D000C32A98 /* Images.xcassets in Resources */,
+				F2AE863B1ACFDE6A00F74116 /* prescription120.png in Resources */,
+				F2AE863F1ACFE71F00F74116 /* prescriptionlaunchimage.jpeg in Resources */,
+				F2AE863D1ACFDECE00F74116 /* prescription180.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +275,14 @@
 			files = (
 				F2C5F4B61ACE67D000C32A98 /* AppDelegate.m in Sources */,
 				F2C5F4B91ACE67D000C32A98 /* Prescriptions.xcdatamodeld in Sources */,
-				F2C5F4BC1ACE67D000C32A98 /* ViewController.m in Sources */,
+				F2C5F4E11ACE755000C32A98 /* AddPrescriptionViewController.m in Sources */,
+				F2C5F4E71ACE899F00C32A98 /* Patient.m in Sources */,
+				F2C5F4BC1ACE67D000C32A98 /* PatientsViewController.m in Sources */,
 				F2C5F4B31ACE67D000C32A98 /* main.m in Sources */,
+				F2C5F4DE1ACE754000C32A98 /* AddPatientViewController.m in Sources */,
+				F2C5F4DB1ACE750600C32A98 /* PrescriptionsViewController.m in Sources */,
+				F2C5F4E41ACE788E00C32A98 /* CoreViewController.m in Sources */,
+				F2C5F4EA1ACE89A000C32A98 /* Prescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +473,7 @@
 				F2C5F4D51ACE67D000C32A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2C5F4D61ACE67D000C32A98 /* Build configuration list for PBXNativeTarget "PrescriptionsTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +482,7 @@
 				F2C5F4D81ACE67D000C32A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
